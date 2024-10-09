@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Travel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Choose Your Preferences</h2>
+        <form action="/recommend" method="post">
+            <label for="budget">Budget:</label>
+            <select id="budget" name="budget">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="weather">Weather:</label>
+            <select id="weather" name="weather">
+                <option value="sunny">Sunny</option>
+                <option value="mild">Mild</option>
+                <option value="snowy">Snowy</option>
+            </select>
+
+            <label for="activity">Preferred Activity:</label>
+            <select id="activity" name="activity">
+                <option value="beach">Beach</option>
+                <option value="culture">Culture</option>
+                <option value="adventure">Adventure</option>
+                <option value="skiing">Skiing</option>
+            </select>
+
+            <label for="continent">Continent:</label>
+            <select id="continent" name="continent">
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Africa">Africa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+
+            <button type="submit" class="btn">Get Recommendation</button>
+        </form>
+    </div>
+</body>
+</html>

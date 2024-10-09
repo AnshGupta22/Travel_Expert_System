@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Travel Recommendation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Your Travel Destination</h2>
+        {% if result == 'India' %}
+        <img src="/static/images/India.jpg" alt="India" class="destination-image">
+        {% elif result == 'Switzerland' %}
+        <img src="/static/images/Switzerland.jpg" alt="Switzerland" class="destination-image">
+        {% elif result == 'Japan' %}
+        <img src="/static/images/japan.jpg" alt="Japan" class="destination-image">
+        {% elif result == 'Vietnam' %}
+        <img src="/static/images/Vietnam.jpg" alt="Vietnam" class="destination-image">
+        {% else %}
+        <img src="/static/images/Monaco.jpg" alt="Travel Destination" class="destination-image">
+        {% endif %}
+        <p><strong>Destination:</strong> {{ result }}</p>
+        <p><strong>Description:</strong> {{ explanation }}</p>
+        <a class="btn" href="/">Go Back</a>
+        <a class="btn" href="https://maps.google.com/?q={{ result }}" target="_blank">View on Map</a>
+    </div>
+</body>
+</html>

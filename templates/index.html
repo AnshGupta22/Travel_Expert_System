@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expert System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Expert System</h1>
+        <form action="/recommend" method="POST">
+            <div class="form-group">
+                <label for="budget">Choose your Budget:</label>
+                <select name="budget" id="budget" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="weather">Preferred Weather:</label>
+                <select name="weather" id="weather" required>
+                    <option value="sunny">Sunny</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="cold">Cold</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="activity">Preferred Activity:</label>
+                <select name="activity" id="activity" required>
+                    <option value="beach">Beach</option>
+                    <option value="mountain">Mountain</option>
+                    <option value="city">City</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="continent">Preferred Continent:</label>
+                <select name="continent" id="continent" required>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="north_america">North America</option>
+                    <option value="south_america">South America</option>
+                    <option value="africa">Africa</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Get Recommendation</button>
+        </form>
+    </div>
+</body>
+</html>
